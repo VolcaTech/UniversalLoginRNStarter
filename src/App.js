@@ -10,6 +10,7 @@ Navigation.registerComponent('IntroScreen', () => IntroScreen);
 export default class App extends React.Component {
     constructor(props) {
         super(props);
+	this._testEthers();
 	this.startApp();
     }
 
@@ -25,7 +26,7 @@ export default class App extends React.Component {
 	console.log("SDK INITED");
 
 	const result = await sdk.create(
-	    'alexxxx1.mylogin.eth'
+	    'alexxxx2.mylogin.eth'
 	);
 	console.log("identityAddress: " + result);	
     }
