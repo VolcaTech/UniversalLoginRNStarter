@@ -15,11 +15,11 @@ class IntroScreen extends React.Component {
 	this.provider = new ethers.providers.JsonRpcProvider('http://localhost:18545');
 	this.sdk = new EthereumIdentitySDK('http://localhost:3311', this.provider);
     }
-
+    
     async componentDidMount() {
 	await this.sdk.start();
     }
-
+    
     componentWillUnmount() {
 	this.subscription.remove();
 	this.sdk.stop();
@@ -27,7 +27,7 @@ class IntroScreen extends React.Component {
 
     _getLabelStub() {
 	return {
-	    ipAddress: '192...',
+	    ipAddress: 'localhost',
 	    name: 'React Native',
 	    city: '',
 	    time: '',
@@ -36,12 +36,7 @@ class IntroScreen extends React.Component {
 	};
     }    
     
-    async _connect(username) {
-	const jsonRpcUrl = "http://localhost:18545";
-	const relayerUrl = "http://localhost:3311";
-	const provider = new ethers.providers.JsonRpcProvider(jsonRpcUrl);	
-	const sdk = new EthereumIdentitySDK(relayerUrl, provider);
-	
+    async _connect(username) {	
 	const name = `${username}.mylogin.eth`;
 	const identityAddress = await this.sdk.identityExist(name);
 	this.identityAddress = identityAddress;
