@@ -49,11 +49,11 @@ class IntroScreen extends React.Component {
 	    const privateKey = await this.sdk.connect(identityAddress, this._getLabelStub());
 	    this.privateKey = privateKey;
 	    const { address } = new Wallet(privateKey);
-	    // this.subscription = this.sdk.subscribe('KeyAdded', identityAddress, (event) => {
-	    // 	if (event.address === address) {
-	    // 	    this.setState({view: 'connected'});
-	    // 	}
-	    // });
+	    this.subscription = this.sdk.subscribe('KeyAdded', identityAddress, (event) => {
+	    	if (event.address === address) {
+	    	    this.setState({view: 'connected'});
+	    	}
+	    });
 	} else {
 	    throw new Error(`Identity ${name} does not exist.`);
 	}
@@ -64,7 +64,6 @@ class IntroScreen extends React.Component {
 	try { 
 	    await this._connect(this.state.username);
 	} catch (err) {
-	    console.log({err})
 	    this.setState({error: err.message});
 	}
     }
@@ -102,7 +101,9 @@ class IntroScreen extends React.Component {
     
     _renderConnectedView() {
 	return (
-	    <Text>Connected!</Text>
+	   <View>
+  		<Text>Connected!</Text>
+	   </View>
 	);
     }
 
@@ -110,7 +111,7 @@ class IntroScreen extends React.Component {
 	if (this.state.view === 'login') {
 	    return this._renderLoginForm();
 	} else if (this.state.view === 'connected') {
-	    this._renderConnectedView();
+	    return this._renderConnectedView();
 	}
     }
     
@@ -130,12 +131,11 @@ const styles = StyleSheet.create({
 	borderColor: 'gray',
 	borderWidth: 1
     },
-    // screenContainer: {
-    //     flex: 1,
-    //     // flexDirection: 'column',
-    //     // justifyContent: 'space-between',
-    //     backgroundColor: '#fff'
-    // },
+    screenContainer: {
+        flex: 1,
+	padding: 20,
+        backgroundColor: '#fff'
+    },
     title: {
         paddingTop: 30,
         color: 'blue',
