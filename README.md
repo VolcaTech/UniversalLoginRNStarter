@@ -30,7 +30,7 @@ New to React Native? Here's a helpful introduction: https://facebook.github.io/r
 
 1.  Clone the GitHub repository to your machine.
 2.  Run `yarn` to get all of the packages required.
-3.  Run `./postinstall-npm-script.sh`.
+3.  Run `./postinstall-npm-script.sh` script.
 4.  Run `npm run start --reset-cache` to start the bundler.
 5.  Open ios directory in Xcode.
 6.  Run the project by clicking the play button.
@@ -39,7 +39,7 @@ New to React Native? Here's a helpful introduction: https://facebook.github.io/r
 
 1.  Clone the GitHub repository to your machine.
 2.  Run `yarn` to get all of the packages required.
-3.  Run `./postinstall-npm-script.sh`
+3.  Run `./postinstall-npm-script.sh` script.
 4.  Run `npm run start --reset-cache` to start the bundler.
 5.  Open android directory on Android Studio.
 6.  Run the project by clicking the play button.
