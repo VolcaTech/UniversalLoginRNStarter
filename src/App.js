@@ -1,6 +1,5 @@
 import React from 'react';
 import { Navigation } from 'react-native-navigation';
-import registerScreens from './views/screens';
 import ethers, {Wallet} from 'ethers';
 import EthereumIdentitySDK from 'universal-login-monorepo/universal-login-sdk';
 import IntroScreen from './views/screens/IntroScreen';
@@ -11,15 +10,12 @@ Navigation.registerComponent('IntroScreen', () => IntroScreen);
 export default class App extends React.Component {
     constructor(props) {
         super(props);
-	this._testEthers();
 	this.startApp();
     }
 
     async _testEthers() {
 	const privateKey = await ethers.Wallet.createRandom().privateKey;
 	console.log({privateKey});
-
-
 	const jsonRpcUrl = "http://localhost:18545";
 	const relayerUrl = "http://localhost:3311";
 	const provider = new ethers.providers.JsonRpcProvider(jsonRpcUrl);	
