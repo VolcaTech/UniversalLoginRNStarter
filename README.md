@@ -29,18 +29,20 @@ New to React Native? Here's a helpful introduction: https://facebook.github.io/r
 #### iOS
 
 1.  Clone the GitHub repository to your machine.
-2.  Run `yarn install` to get all of the packages required.
-3.  Run `npm run start --reset-cache` to start the bundler.
-4.  Open ios directory in Xcode.
-5.  Run the project by clicking the play button.
+2.  Run `yarn` to get all of the packages required.
+3.  Run `./postinstall-npm-script.sh`.
+4.  Run `npm run start --reset-cache` to start the bundler.
+5.  Open ios directory in Xcode.
+6.  Run the project by clicking the play button.
 
 #### Android
 
 1.  Clone the GitHub repository to your machine.
-2.  Run `yarn install` to get all of the packages required.
-3.  Run `npm run start --reset-cache` to start the bundler.
-4.  Open android directory on Android Studio.
-5.  Run the project by clicking the play button.
+2.  Run `yarn` to get all of the packages required.
+3.  Run `./postinstall-npm-script.sh`
+4.  Run `npm run start --reset-cache` to start the bundler.
+5.  Open android directory on Android Studio.
+6.  Run the project by clicking the play button.
 
 ## Hacking
 Run example and create an identity by following instructions - [tutorial](https://github.com/EthWorks/UniversalLoginSDK/blob/master/Tutorial.md).  
