@@ -47,7 +47,7 @@ New to React Native? Here's a helpful introduction: https://facebook.github.io/r
 ### Please note 
 
 After each `yarn` you also need to run `yarn build`, which makes the following hacks: 
-- node_modules/universal-login-monorepo/universal-login-copied is copied to node_modules/. (As UniversalLoginsSDK is a monorepo and `universal-loigin-sdk` has dependency on `universal-loigin-contracts`).  
+- node_modules/universal-login-monorepo/universal-login-contracts directory is copied to node_modules/. (As UniversalLoginsSDK is a monorepo and `universal-loigin-sdk` has dependency on `universal-loigin-contracts`).  
 - Hacks from `rn-nodeify` package for crypto dependencies.  
 
 
