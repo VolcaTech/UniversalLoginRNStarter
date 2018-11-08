@@ -1,5 +1,5 @@
 # UniversalLoginRNStarter
-React Native Starter App for [UniversalLoginsSDK](https://github.com/UniversalLogin/UniversalLoginSDK).  
+React Native Starter App for [UniversalLoginSDK](https://github.com/UniversalLogin/UniversalLoginSDK).  
 
 
 ## Requirements  
