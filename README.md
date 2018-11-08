@@ -30,7 +30,7 @@ New to React Native? Here's a helpful introduction: https://facebook.github.io/r
 
 1.  Clone the GitHub repository to your machine.
 2.  Run `yarn` to get all of the packages required.
-3.  Run `./postinstall-npm-script.sh` script.
+3.  Run `yarn build` script.
 4.  Run `npm run start --reset-cache` to start the bundler.
 5.  Open ios directory in Xcode.
 6.  Run the project by clicking the play button.
@@ -39,10 +39,17 @@ New to React Native? Here's a helpful introduction: https://facebook.github.io/r
 
 1.  Clone the GitHub repository to your machine.
 2.  Run `yarn` to get all of the packages required.
-3.  Run `./postinstall-npm-script.sh` script.
+3.  Run `yarn build` script.
 4.  Run `npm run start --reset-cache` to start the bundler.
 5.  Open android directory on Android Studio.
 6.  Run the project by clicking the play button.
+
+### Please note 
+
+After each `yarn` you also need to run `yarn build`, which makes the following hacks: 
+- node_modules/universal-login-monorepo/universal-login-copied is copied to node_modules/. (As UniversalLoginsSDK is a monorepo and `universal-loigin-sdk` has dependency on `universal-loigin-contracts`).  
+- Hacks from `rn-nodeify` package for crypto dependencies.  
+
 
 ## Hacking
 Run example and create an identity by following instructions - [tutorial](https://github.com/EthWorks/UniversalLoginSDK/blob/master/Tutorial.md).  
