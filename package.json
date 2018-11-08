@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "postinstall": "./postinstall-npm-script.sh",
+    "build": "./postinstall-npm-script.sh",
     "universal-login:build": "cd node_modules/universal-login-monorepo && yarn",
     "universal-login:start": "cd node_modules/universal-login-monorepo/universal-login-example && yarn dev:start",
     "test": "jest"
