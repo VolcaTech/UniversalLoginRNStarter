@@ -29,7 +29,7 @@ New to React Native? Here's a helpful introduction: https://facebook.github.io/r
 #### iOS
 
 1.  Clone the GitHub repository to your machine.
-2.  Run `yarn` to get all of the packages required.
+2.  Run `yarn` to get all of the packages required. (Ignore universal-login-monorepo errors)
 3.  Run `yarn build` script.
 4.  Run `npm run start --reset-cache` to start the bundler.
 5.  Open ios directory in Xcode.
@@ -38,7 +38,7 @@ New to React Native? Here's a helpful introduction: https://facebook.github.io/r
 #### Android
 
 1.  Clone the GitHub repository to your machine.
-2.  Run `yarn` to get all of the packages required.
+2.  Run `yarn` to get all of the packages required. (Ignore universal-login-monorepo errors)
 3.  Run `yarn build` script.
 4.  Run `npm run start --reset-cache` to start the bundler.
 5.  Open android directory on Android Studio.
