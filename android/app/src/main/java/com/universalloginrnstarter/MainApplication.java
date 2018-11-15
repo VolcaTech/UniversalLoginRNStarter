@@ -4,7 +4,6 @@ import android.support.annotation.NonNull;
 import com.facebook.react.ReactPackage;
 import com.reactnativenavigation.NavigationApplication;
 import com.bitgo.randombytes.RandomBytesPackage;
-import co.airbitz.fastcrypto.RNFastCryptoPackage;
 import java.util.Arrays;
 import java.util.List;
 
@@ -23,8 +22,7 @@ public class MainApplication extends NavigationApplication {
 	// No need to add RnnPackage and MainReactPackage
 	return Arrays.<ReactPackage>asList(
 					   // eg. new VectorIconsPackage()
-					   new RandomBytesPackage(),
-					   new RNFastCryptoPackage()
+					   new RandomBytesPackage()
 					   );
     }
     
